@@ -1,0 +1,1 @@
+type = "Story" AND project not in ("Strata v3","TEST PROJECT JC","Analytics Platform","Andy's Play Pen","ASCO OMOP","AZO-Ongoing","Center of Excellence") AND created >= 2018-07-01 and created <= startOfDay()

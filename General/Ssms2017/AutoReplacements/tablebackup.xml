@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>tablebackup</Token>
+  <Name>table backup</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>Declare @table nvarchar(max) 
+Declare @backup_table nvarchar(max) 
+DECLARE @sql NVARCHAR(MAX)
+set @table = 'DATABASENAME.dbo.tblyourtable'
+set @backup_table = @table+'_'+cast(CONVERT(varchar(8), GETDATE(), 112) as varchar)
+set @sql =N'select * into ' + @backup_table + ' from ' + @table
+--print @backup_table
+--print @sql
+EXEC sp_executesql @sql</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

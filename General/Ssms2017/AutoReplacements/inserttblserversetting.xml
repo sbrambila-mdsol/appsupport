@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>inserttblserversetting</Token>
+  <Name>insert to tblServerSetting</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>IF NOT EXISTS (SELECT * FROM TPS_DBA.dbo.tblServerSetting WHERE Settingname = '#') --populate 
+	BEGIN 
+		INSERT INTO TPS_DBA.dbo.tblServerSetting (SettingDescription, SettingName, SettingValue)
+		VALUES ('', '', '') 	
+	END</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

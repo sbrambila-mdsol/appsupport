@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>tqerror</Token>
+  <Name>task queue error messages</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>--Declare processing db
+declare @DBname varchar(100) = 
+	(
+		SELECT TOP 1 TPS_DBA.dbo.udfGetArgument(Arguments, 'PROCESSINGDB') FROM [TPS_DBA].[dbo].[vwTaskQueue]
+			WHERE statusid = 3
+			AND ErrorMessage &lt;&gt; 'A Task in parallel grouping has failed.  This task will not be executed and is being marked as Failed'
+			order by convert(datetime, starttime) desc
+	)
+
+--Run ID and ScenarioID for errors
+select * into #RunAndScenID from 
+	(
+		select top (1) TPSScenarioTypeID, RunId from [TPS_DBA].[dbo].[vwTaskQueue] 
+			where errormessage is not null
+			order by convert(datetime, starttime) desc
+	) as TaskIDs
+
+--Datafeed IDs for errors
+select * into #datafeedID from 
+	(
+		SELECT DatafeedID FROM [TPS_DBA].[dbo].[vwTaskQueue] 
+			where runid = 
+			(
+				select RunId from #RunAndScenID
+			)
+			and ErrorMessage is not null and datafeedID &lt;&gt; ''
+	) as dfID
+
+--Taskqueuegood 
+SELECT * FROM [TPS_DBA].[dbo].[vwTaskQueue] 
+	where runid = 
+		(
+			select RunId from #RunAndScenID
+		)
+	and ErrorMessage is not null
+	order by convert(datetime, starttime) desc
+
+
+--Datafeed
+declare @dfCount int
+declare @sql nvarchar(4000)
+SET @dfCount = (select count(*) from #datafeedID)
+Print @dfCount
+IF @dfCount &gt; 0 
+	SET @sql = 
+	'select * from ' + @DBname + '.agd.tblmddatafeed 
+		where tpsdatafeedid in 
+			(
+				select * from #datafeedID 
+			)
+	'
+exec (@sql)
+
+--Datafeeddownload
+declare @DLcount int 
+SET @sql = 
+	'select @totalDLs =
+		(
+			select count(*) from ' + @DBname + '.agd.tblmddatafeeddownload
+				where tpsdatafeedid in 
+				(
+					select * from #datafeedID
+				)
+		)
+	 '
+
+exec sp_executesql @sql, N'@totalDLs int out', @DLcount out
+
+IF @DLCount &gt; 0 
+SET @sql =	
+	'select * from ' + @DBname + '.agd.tblmddatafeeddownload
+		where tpsdatafeedid in 
+		(
+			select * from #datafeedID
+		)
+	'
+--Datarun
+SET @sql = 
+	'select * from ' + @DBname + '.agd.tblMdDataRun
+		where tpsscenariotypeid = 
+			(
+				select TPSScenarioTypeID from #RunAndScenID
+			)
+		order by ExecOrder asc
+	'
+exec (@sql)
+
+drop table #RunAndScenID
+drop table #datafeedID</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

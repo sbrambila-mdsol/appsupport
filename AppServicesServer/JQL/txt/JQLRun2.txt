@@ -1,0 +1,1 @@
+type = "Production Run" AND created >= 2018-07-01

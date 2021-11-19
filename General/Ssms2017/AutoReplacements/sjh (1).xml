@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>sjh</Token>
+  <Name>job history query</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>SET NOCOUNT ON;
+use 
+msdb
+select 
+        sh.server AS [Server],
+        sj.name AS [Job Name]
+        ,CASE sj.enabled
+			WHEN 0 THEN 'No'
+			WHEN 1 THEN 'Yes'
+			ELSE 'Unknown' 
+			END AS [Enabled]
+        ,sh.run_date AS [Run Date]   
+        ,CASE sh.Run_Status
+			WHEN 0 THEN 'Failed'
+			WHEN 1 THEN 'Successful'
+			WHEN 2 THEN 'Retrying'
+			WHEN 3 THEN 'Canceled'
+			ELSE 'Unknown' 
+			END AS [Run Status]
+        ,STUFF(STUFF(RIGHT(REPLICATE('0', 6) +  CAST(sh.run_time as varchar(6)), 6), 3, 0, ':'), 6, 0, ':') 'Start Time' 
+        ,STUFF(STUFF(STUFF(RIGHT(REPLICATE('0', 8) + CAST(sh.run_duration as varchar(8)), 8), 3, 0, ':'), 6, 0, ':'), 9, 0, ':') 'Run Duration (DD:HH:MM:SS)  ' 
+        ,sh.message AS [Message]
+FROM msdb.dbo.sysjobs sj
+JOIN msdb.dbo.sysjobhistory sh  
+ON sj.job_id = sh.job_id 
+where 
+step_name = '(Job outcome)'
+and run_date = CONVERT(varchar(8), GETDATE(), 112) 
+--and sj.name like '%claims%'
+order by run_date DESC, run_time DESC</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

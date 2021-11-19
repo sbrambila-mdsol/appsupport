@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>spyj</Token>
+  <Name>currently running jobs</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>true</SelectReplacement>
+  <Replacement>SELECT j.name AS [Job Name], 
+	convert(varchar,((DATEDIFF(ss,a.start_execution_date, GETDATE ()))/(60*60))) + ' h ' + 
+	convert(varchar,(convert(varchar,((DATEDIFF(ss,a.start_execution_date, GETDATE ()))-(convert(varchar,((DATEDIFF(ss,a.start_execution_date, GETDATE ()))%60))))))/60%60) + ' m ' + 
+	convert(varchar,((DATEDIFF(ss,a.start_execution_date, GETDATE ()))%60)) + ' s ' AS [Duration]
+FROM msdb.dbo.sysjobactivity a INNER JOIN msdb.dbo.sysjobs j
+ON a.job_id =j.job_id
+WHERE CONVERT(DATE,a.start_execution_date )=CONVERT(DATE,GETDATE ())
+AND a.stop_execution_date IS NULL</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

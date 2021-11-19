@@ -1,0 +1,1 @@
+type = "Production Run" AND updated >= startOfDay() ORDER BY updated DESC, project

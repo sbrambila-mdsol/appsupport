@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ExecutionPostCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Enabled>true</Enabled>
+  <Name>Execution Log</Name>
+  <TriggeredByDefault>false</TriggeredByDefault>
+  <DurationFrom>0</DurationFrom>
+  <CommandPath />
+  <CommandArguments />
+  <StoreStatus>true</StoreStatus>
+  <StatusPath>%APPDATA%\SSMSBoost\ScriptExecutionInfo\{Year}{Month}{Day}_{Hour}{Minute}{Second}_Status.txt</StatusPath>
+  <StatusPattern>Document: {DocumentTitle}
+Execution result: {Result}
+Connection: {Connection}
+Started: {StartTime:HH:mm:ss} Ended: {EndTime:HH:mm:ss}
+Duration: {Duration}</StatusPattern>
+  <StoreExecutedScript>true</StoreExecutedScript>
+  <ExecutedScriptPath>%APPDATA%\SSMSBoost\ScriptExecutionInfo\{Year}{Month}{Day}_{Hour}{Minute}{Second}_ExecutedScript.sql</ExecutedScriptPath>
+  <ExecutedScriptMaxSize>10240</ExecutedScriptMaxSize>
+  <StoreExecutionMessages>true</StoreExecutionMessages>
+  <ExecutionMessagesPath>%APPDATA%\SSMSBoost\ScriptExecutionInfo\{Year}{Month}{Day}_{Hour}{Minute}{Second}_ExecutionMessages.txt</ExecutionMessagesPath>
+  <StoreGrid>true</StoreGrid>
+  <GridScripter>Excel (MS XML Spreadsheet)</GridScripter>
+</ExecutionPostCommand>

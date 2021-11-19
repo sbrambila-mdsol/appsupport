@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridScripterTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>INSERT INTO #tmpres EXEC sp_storedProc</Name>
+  <SaveGranularity>Entire</SaveGranularity>
+  <SavePath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\{Year}{Month}{Day}_{Hour}{Minute}{Second}.sql</SavePath>
+  <OpenWithApplication />
+  <InvokeParametersReplacement>true</InvokeParametersReplacement>
+  <DefaultClipboardFormat>Text</DefaultClipboardFormat>
+  <Document>{Selections}</Document>
+  <Selection>CREATE TABLE &lt;tmpTableName, sysname, #tmpRes&gt; (
+{HeadersRow})
+
+INSERT INTO &lt;tmpTableName, sysname, #tmpRes&gt; EXEC &lt;StoredProcName, sysname,&gt;
+
+SELECT * FROM &lt;tmpTableName, sysname, #tmpRes&gt;</Selection>
+  <SelectionsSeparator>\r\n-------------------\r\n</SelectionsSeparator>
+  <Header>	{ColumnName} {ColumnType}</Header>
+  <HeadersSeparator>,\r\n</HeadersSeparator>
+  <Row />
+  <RowsSeparator />
+  <ColumnName />
+  <ColumnNamesSeparator />
+  <Value />
+  <ValuesSeparator />
+  <StringFormatter>
+    <Pattern>{Value}</Pattern>
+  </StringFormatter>
+  <NStringFormatter>
+    <Pattern>{Value}</Pattern>
+  </NStringFormatter>
+  <IntegerFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>D</Format>
+  </IntegerFormatter>
+  <DoubleFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </DoubleFormatter>
+  <CurrencyFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </CurrencyFormatter>
+  <DateTimeFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>yyyy-MM-dd HH:mm:ss.fff</Format>
+  </DateTimeFormatter>
+  <DateFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>yyyy-MM-dd</Format>
+  </DateFormatter>
+  <TimeFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>HH:mm:ss.fff</Format>
+  </TimeFormatter>
+  <BooleanFormatter>
+    <Pattern>{Value}</Pattern>
+    <TrueString>1</TrueString>
+    <FalseString>0</FalseString>
+  </BooleanFormatter>
+  <GuidFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format />
+  </GuidFormatter>
+  <BinaryFormatter>
+    <Pattern>{Value}</Pattern>
+  </BinaryFormatter>
+  <XmlFormatter>
+    <Pattern>{Value}</Pattern>
+  </XmlFormatter>
+  <SpatialFormatter>
+    <Pattern>{Value}</Pattern>
+    <AsText>true</AsText>
+  </SpatialFormatter>
+  <NullString>NULL</NullString>
+  <UseInvariantCulture>false</UseInvariantCulture>
+  <MaxCharsPerValue>0</MaxCharsPerValue>
+  <ValuesEncodeMethod>None</ValuesEncodeMethod>
+</GridScripterTemplate>

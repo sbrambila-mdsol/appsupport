@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>selgwp</Token>
+  <Name>select from greenwich</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>select * from GREENWICH.AGD.tblMdDataRun where TPSScenarioTypeID = 
+select * from GREENWICH.AGD.tblMdDataFeed where TPSScenarioTypeID = 
+select * from GREENWICH.AGD.tblMdDataFeedDownload where TPSDataFeedID in ( 
+select TPSDataFeedID from GREENWICH.AGD.tblMdDataFeed where TPSScenarioTypeID = #)
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

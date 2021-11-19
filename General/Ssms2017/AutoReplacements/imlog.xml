@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>imlog</Token>
+  <Name>import log</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>true</SelectReplacement>
+  <Replacement> DECLARE @ProcessingDb VARCHAR(MAX) = (SELECT TOP 1 TPS_DBA.dbo.udfGetArgument(Arguments, 'PROCESSINGDB') FROM [TPS_DBA].[dbo].[vwTaskQueue])
+ DECLARE @SQL VARCHAR(MAX) = 'SELECT top 1000  ImportedDate, FilePath, ImportTableName, ImportedFileName, ImportSucceeded, RecordsLoaded, TPSScenarioTypeID, TPSDataFeedID FROM  ' + @ProcessingDb + '.AGD.tblMdDatafeedImportlog ORDER BY ImportID DESC' --PRINT @SQL
+ EXEC (@SQL)</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

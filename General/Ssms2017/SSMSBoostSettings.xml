@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SSMSBoostSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PreferredConnections>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PROINS10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PROINS10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-16711936&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PRdINS10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PRdINS10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-65536&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertEnabled>true</AlertEnabled>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PROTSR10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PROTSR10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-16711936&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE&gt;TESARO_CONTROLLER&lt;/DATABASE&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PRdTSR10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PRdTSR10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-65536&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;qaTSR10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;qaTSR10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-32704&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PROARI27DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PROARI27DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-16711936&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PROTSR10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PROTSR10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-16711936&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PROARI27DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PROARI27DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-16711936&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE&gt;ARIAD_PROCESSING_EU_Daily&lt;/DATABASE&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PROINS10DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PROINS10DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-16711936&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;DATABASE&gt;INSMED&lt;/DATABASE&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+    </ConnectionSetting>
+    <ConnectionSetting>
+      <ConnectionInfoString>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;UIConnectionInfo&gt;&lt;ConnectionInformation&gt;&lt;ServerType&gt;8c91a03d-f9b4-46c0-a305-b5dcc79ff907&lt;/ServerType&gt;&lt;ServerName&gt;PRdARI27DB1&lt;/ServerName&gt;&lt;DisplayName&gt;PRdARI27DB1&lt;/DisplayName&gt;&lt;AuthenticationType&gt;0&lt;/AuthenticationType&gt;&lt;UserName /&gt;&lt;Password /&gt;&lt;AdvancedOptions&gt;&lt;CONNECTION_TIMEOUT&gt;30&lt;/CONNECTION_TIMEOUT&gt;&lt;EXEC_TIMEOUT&gt;0&lt;/EXEC_TIMEOUT&gt;&lt;PACKET_SIZE&gt;4096&lt;/PACKET_SIZE&gt;&lt;ENCRYPT_CONNECTION&gt;False&lt;/ENCRYPT_CONNECTION&gt;&lt;TRUST_SERVER_CERTIFICATE&gt;False&lt;/TRUST_SERVER_CERTIFICATE&gt;&lt;USE_CUSTOM_CONNECTION_COLOR&gt;True&lt;/USE_CUSTOM_CONNECTION_COLOR&gt;&lt;CUSTOM_CONNECTION_COLOR&gt;-65536&lt;/CUSTOM_CONNECTION_COLOR&gt;&lt;USE_CUSTOM_TENANT_ID&gt;False&lt;/USE_CUSTOM_TENANT_ID&gt;&lt;CUSTOM_TENANT_ID /&gt;&lt;/AdvancedOptions&gt;&lt;/ConnectionInformation&gt;&lt;/UIConnectionInfo&gt;</ConnectionInfoString>
+      <AlertTip>Be careful ! You are connected to: 
+     Server: @Server
+Database: @Database
+   as User: @User</AlertTip>
+      <AlertTipColorString>Black</AlertTipColorString>
+      <AlertTipBackgroundColorString>255, 128, 128</AlertTipBackgroundColorString>
+      <AlertWidth>1000</AlertWidth>
+    </ConnectionSetting>
+  </PreferredConnections>
+  <Shortcuts>
+    <ShortcutRegistration>
+      <Caption>Execute to Text</Caption>
+      <AddToolbarButton>true</AddToolbarButton>
+      <AddContextMenuButton>true</AddContextMenuButton>
+      <ShortcutContext>SQL Query Editor</ShortcutContext>
+      <Shortcut>None</Shortcut>
+      <CommandSequence>
+        <CommandWraWrapper>
+          <Command>
+            <CommandName>Query.ResultstoText</CommandName>
+          </Command>
+        </CommandWraWrapper>
+        <CommandWraWrapper>
+          <Command>
+            <CommandName>Query.Execute</CommandName>
+          </Command>
+        </CommandWraWrapper>
+      </CommandSequence>
+      <CommandId>Macro01</CommandId>
+    </ShortcutRegistration>
+    <ShortcutRegistration>
+      <Caption>Execute to Grid</Caption>
+      <AddToolbarButton>true</AddToolbarButton>
+      <AddContextMenuButton>true</AddContextMenuButton>
+      <ShortcutContext>SQL Query Editor</ShortcutContext>
+      <Shortcut>None</Shortcut>
+      <CommandSequence>
+        <CommandWraWrapper>
+          <Command>
+            <CommandName>Query.ResultstoGrid</CommandName>
+          </Command>
+        </CommandWraWrapper>
+        <CommandWraWrapper>
+          <Command>
+            <CommandName>Query.Execute</CommandName>
+          </Command>
+        </CommandWraWrapper>
+      </CommandSequence>
+      <CommandId>Macro02</CommandId>
+    </ShortcutRegistration>
+  </Shortcuts>
+  <EnteredDefaultShortcuts>
+    <string>Execute to Text</string>
+    <string>Execute to Grid</string>
+  </EnteredDefaultShortcuts>
+  <ScripterOptions>
+    <CustomOptions>
+      <DriChecks>true</DriChecks>
+      <DriDefaults>true</DriDefaults>
+      <DriForeignKeys>true</DriForeignKeys>
+      <DriPrimaryKey>true</DriPrimaryKey>
+      <DriUniqueKeys>true</DriUniqueKeys>
+      <EnforceScriptingOptions>true</EnforceScriptingOptions>
+      <ExtendedProperties>true</ExtendedProperties>
+      <IncludeDatabaseContext>true</IncludeDatabaseContext>
+      <IncludeHeaders>true</IncludeHeaders>
+      <NoCollation>true</NoCollation>
+      <NoIndexPartitioningSchemes>true</NoIndexPartitioningSchemes>
+      <NoTablePartitioningSchemes>true</NoTablePartitioningSchemes>
+      <SchemaQualifyForeignKeysReferences>true</SchemaQualifyForeignKeysReferences>
+      <ScriptDataCompression>false</ScriptDataCompression>
+      <Statistics>false</Statistics>
+      <TargetServerVersion>Version140</TargetServerVersion>
+    </CustomOptions>
+  </ScripterOptions>
+  <ScriptFileNameSettings />
+  <SqlFormattingSettings />
+  <SsmsTitleSettings />
+  <GridVisualizers>
+    <DestinationPath>C:\Users\afennessy\AppData\Local\Temp\</DestinationPath>
+  </GridVisualizers>
+  <AlertTipsMargin>
+    <All>-1</All>
+    <Bottom>20</Bottom>
+    <Left>20</Left>
+    <Right>20</Right>
+    <Top>2</Top>
+  </AlertTipsMargin>
+  <ExecutionHistoryPath>D:\Users\afennessy\AppData\Roaming\SSMSBoost\ScriptExecutionHistory\{Year}{Month}\{Year}{Month}{Day}_{Server}_{Database}_{Hour}{Minute}{Second}.sql</ExecutionHistoryPath>
+  <EditorHistoryPath>d:\Users\afennessy\AppData\Roaming\SSMSBoost\EditorContentsHistory</EditorHistoryPath>
+  <CompareToolCmdExecute />
+  <MaxNewUnsavedRecent>10</MaxNewUnsavedRecent>
+  <MaxSavedRecent>10</MaxSavedRecent>
+  <MaxRobotRecentSessions>10</MaxRobotRecentSessions>
+  <DefaultTimestampFormat>yyyy-MM-dd HH:mm:ss</DefaultTimestampFormat>
+  <RegionsSettings>
+    <StartMarker>--#region</StartMarker>
+    <EndMarker>--#endregion</EndMarker>
+    <AutoRegionsOnDocumentOpened>true</AutoRegionsOnDocumentOpened>
+    <ExpandRegionsOnDocumentOpened>false</ExpandRegionsOnDocumentOpened>
+  </RegionsSettings>
+  <RecentConnections />
+  <ExecutionGuard>
+    <SingleDeleteInterruptMode>Ignore</SingleDeleteInterruptMode>
+    <MixedDeleteInterruptMode>Ignore</MixedDeleteInterruptMode>
+    <SingleUpdateInterruptMode>Ignore</SingleUpdateInterruptMode>
+    <MixedUpdateInterruptMode>Ignore</MixedUpdateInterruptMode>
+    <SingleTruncateInterruptMode>Ignore</SingleTruncateInterruptMode>
+    <MixedTruncateInterruptMode>Ignore</MixedTruncateInterruptMode>
+    <ExcludeTableNames />
+    <UnblockingPhrases />
+  </ExecutionGuard>
+  <ExecutionPostHandling>
+    <Enabled>true</Enabled>
+    <DurationFrom>60</DurationFrom>
+    <MessageTimeout>10</MessageTimeout>
+    <InfiniteMessageTimeoutDurationFrom>30</InfiniteMessageTimeoutDurationFrom>
+    <MessagePattern>Document: {DocumentTitle}
+Execution result: {Result}
+Connection: {Connection}
+Started: {StartTime:HH:mm:ss} Ended: {EndTime:HH:mm:ss}
+Duration: {Duration}</MessagePattern>
+  </ExecutionPostHandling>
+  <UpdateCheck>
+    <AutoCheck>true</AutoCheck>
+  </UpdateCheck>
+  <DatabaseQuery>
+    <Template>XLODBC
+1
+DRIVER=SQL Server;SERVER=@Server;@Login;DATABASE=@Database
+@Query</Template>
+    <WindowsLoginTemplate>TRUSTED_CONNECTION=Yes</WindowsLoginTemplate>
+    <SqlServerLoginTemplate>UID=@UserName;PWD=@Password</SqlServerLoginTemplate>
+    <ExportPassword>false</ExportPassword>
+    <StoreFolderPath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\DatabaseQueries</StoreFolderPath>
+  </DatabaseQuery>
+  <GridAggregates>
+    <Enabled>true</Enabled>
+    <AutoShow>false</AutoShow>
+    <AutoHideMode>OnlyWhenFloating</AutoHideMode>
+    <MaxCells>100000</MaxCells>
+  </GridAggregates>
+  <TransactionsGuard>
+    <Enabled>true</Enabled>
+  </TransactionsGuard>
+  <GridDataCopying>
+    <HeadersTemplate>
+      <Separator>, </Separator>
+    </HeadersTemplate>
+    <HeadersShiftTemplate>
+      <Separator>,\r\n</Separator>
+    </HeadersShiftTemplate>
+    <HeadersControlTemplate>
+      <Separator>\r\n</Separator>
+    </HeadersControlTemplate>
+    <SqlValuesTemplate>
+      <Separator>, </Separator>
+    </SqlValuesTemplate>
+    <SqlValuesShiftTemplate>
+      <Separator>,\r\n</Separator>
+    </SqlValuesShiftTemplate>
+    <SqlValuesControlTemplate>
+      <Separator>\r\n</Separator>
+    </SqlValuesControlTemplate>
+  </GridDataCopying>
+  <ObjectSearch>
+    <ObjectTypesSettings>
+      <SqlObjectTypeSettings>
+        <Type>Table</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>View</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Synonym</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>StoredProcedure</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>TableValuedFunction</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>ScalarValuedFunction</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>AggregateFunction</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>DatabaseTrigger</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>SqlAssembly</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>UserDefinedDataType</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>UserDefinedTableType</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>UserDefinedType</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>XmlSchemaCollection</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Rule</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Default</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>PlanGuide</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Sequence</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>MessageType</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>ServiceContract</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>ServiceQueue</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>ServiceRoute</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>RemoteServiceBinding</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>FullTextCatalog</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>PartitionScheme</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>PartitionFunction</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>FullTextStopList</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>User</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>DatabaseRole</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>ApplicationRole</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Schema</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>AsymmetricKey</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Certificate</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>SymmetricKey</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>DatabaseAuditSpecification</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Column</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Parameter</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>PrimaryKey</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>ForeignKey</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>UniqueConstraint</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>DefaultConstraint</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>CheckConstraint</Type>
+        <Basic>false</Basic>
+      </SqlObjectTypeSettings>
+      <SqlObjectTypeSettings>
+        <Type>Trigger</Type>
+        <Basic>true</Basic>
+      </SqlObjectTypeSettings>
+    </ObjectTypesSettings>
+  </ObjectSearch>
+  <Highlighting>
+    <SelectionRegex>\w\w</SelectionRegex>
+    <Enabled>true</Enabled>
+    <MaxDocumentSize>1024000</MaxDocumentSize>
+    <EnableBeginEnd>true</EnableBeginEnd>
+    <BeginEndFormatName>Bookmark</BeginEndFormatName>
+    <EnableInsertCells>true</EnableInsertCells>
+    <InsertCellsFormatName>Bookmark</InsertCellsFormatName>
+    <EnableSelection>true</EnableSelection>
+    <SelectionFormatName>Inactive Selected Text</SelectionFormatName>
+    <SelectionCaseSensitive>false</SelectionCaseSensitive>
+  </Highlighting>
+</SSMSBoostSettings>

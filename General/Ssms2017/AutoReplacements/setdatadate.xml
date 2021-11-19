@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>setdatadate</Token>
+  <Name>setDatadate</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>exec [Database].[AGD].[uspSetSetting] 'DataDate', 'YourFormattedDate'
+SELECT SettingName, SettingValue FROM [Database].agd.tblMdSetting where SettingName like '%DataDate%'
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridScripterTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>WHERE ColumnName IN (value1,value2..)</Name>
+  <SaveGranularity>Entire</SaveGranularity>
+  <SavePath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\{Year}{Month}{Day}_{Hour}{Minute}{Second}.sql</SavePath>
+  <OpenWithApplication />
+  <InvokeParametersReplacement>false</InvokeParametersReplacement>
+  <DefaultClipboardFormat>Text</DefaultClipboardFormat>
+  <Document>{Selections}</Document>
+  <Selection>WHERE {HeadersRow} in ({Rows})</Selection>
+  <SelectionsSeparator>\r\n----------------\r\n</SelectionsSeparator>
+  <Header>[{ColumnName}]</Header>
+  <HeadersSeparator>\r\n/*Template is designed for one column selection only*/\r\n</HeadersSeparator>
+  <Row>{Values}</Row>
+  <RowsSeparator>,</RowsSeparator>
+  <ColumnName />
+  <ColumnNamesSeparator />
+  <Value>{Value}</Value>
+  <ValuesSeparator>\r\n/*Please Select several values from one column for this template*/\r\n</ValuesSeparator>
+  <StringFormatter>
+    <Pattern>'{Value}'</Pattern>
+  </StringFormatter>
+  <NStringFormatter>
+    <Pattern>N'{Value}'</Pattern>
+  </NStringFormatter>
+  <IntegerFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>D</Format>
+  </IntegerFormatter>
+  <DoubleFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </DoubleFormatter>
+  <CurrencyFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </CurrencyFormatter>
+  <DateTimeFormatter>
+    <Pattern>'{Value}'</Pattern>
+    <Format>yyyyMMdd HH:mm:ss.fff</Format>
+  </DateTimeFormatter>
+  <DateFormatter>
+    <Pattern>'{Value}'</Pattern>
+    <Format>yyyyMMdd</Format>
+  </DateFormatter>
+  <TimeFormatter>
+    <Pattern>'{Value}'</Pattern>
+    <Format>HH:mm:ss.fff</Format>
+  </TimeFormatter>
+  <BooleanFormatter>
+    <Pattern>{Value}</Pattern>
+    <TrueString>1</TrueString>
+    <FalseString>0</FalseString>
+  </BooleanFormatter>
+  <GuidFormatter>
+    <Pattern>'{Value}'</Pattern>
+    <Format />
+  </GuidFormatter>
+  <BinaryFormatter>
+    <Pattern>{Value}</Pattern>
+  </BinaryFormatter>
+  <XmlFormatter>
+    <Pattern>'{Value}'</Pattern>
+  </XmlFormatter>
+  <SpatialFormatter>
+    <Pattern>{Value}</Pattern>
+    <AsText>true</AsText>
+  </SpatialFormatter>
+  <NullString>NULL</NullString>
+  <UseInvariantCulture>true</UseInvariantCulture>
+  <MaxCharsPerValue>0</MaxCharsPerValue>
+  <ValuesEncodeMethod>SqlEncode</ValuesEncodeMethod>
+</GridScripterTemplate>

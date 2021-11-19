@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridVisualizer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Search In Wikipedia</Name>
+  <FileExtension />
+  <OpenInSsms>false</OpenInSsms>
+  <RunFileName>https://www.wikipedia.org/wiki/special:search/{cellText}</RunFileName>
+  <RunArguments />
+  <CellTextEncodeMethod>UrlEncode</CellTextEncodeMethod>
+</GridVisualizer>

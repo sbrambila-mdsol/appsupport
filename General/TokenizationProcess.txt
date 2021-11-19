@@ -1,0 +1,32 @@
+Tokenization Process
+
+Download Scenario runs
+
+dbo.usp_Decrypt_Tokenize is executed on the PROCESSING server, passing the download scenario as input
+
+dbo.usp_Decrypt_Tokenize uses importLog/tblMdDataFeed to find the files that need to be sent from the file server to the tokenization server
+
+dbo.usp_Decrypt_Tokenize moves the files from the file server to the input directory for those files and deletes the original files from the file server. 
+
+The following variables/settings, declard at the beginning of the SP, tell the SP where to input the files and where to find them once output by the tokenization process.
+
+	DECLARE @TokenizationMaxWaitTime INT =( select cast(SettingValue as int) from tps_Dba.dbo.tblServerSetting where SettingName='TokenizationMaxWaitTime')
+	DECLARE @OutputFolderTokenization VARCHAR(800) = ( select SettingValue from tps_Dba.dbo.tblServerSetting where SettingName='OutputFolderTokenization')
+	DECLARE @InputFolderTokenization VARCHAR(800) = ( select SettingValue from tps_Dba.dbo.tblServerSetting where SettingName='InputFolderTokenization')
+	-- DataFeedDescription may be used to specify further sub-directory folders for specific datafeeds
+
+Meanwhile, on PRDSHFUPK1, [Run Tokenization] is scheduled to run every two minutes (on the even minutes) and executes Tokenization.dbo.uspCheckFilesToTokenize
+
+Tokenization.dbo.uspCheckFilesToTokenize looks for files placed in the sub-directories of \\PRDSHFUPK1\Tokenization\input and will decrypt/de-identify/tokenize any files found there.
+
+Once uspCheckFilesToTokenize finds a file in the input directory it will move that file to the working directory \\PRDSHFUPK1\Tokenization\working where the file will be processed.
+
+Once that file has been decrypted, tokenized, and/or de-identified it is moved to the output directory: \\PRDSHFUPK1\Tokenization\output
+
+Meanwhile usp_Decrypt_Tokenize has still been running on the PROCESSING server, looking for the files it sent over in the output directory.
+
+Once usp_Decrypt_Tokenize finds those files it brings them back to the file server and removes them from the output directory. 
+
+Typically, another process/scenario then imports those file.
+
+https://trinitypharmasolutions.atlassian.net/wiki/spaces/DLVR/pages/895615637/Troubleshooting+Patient+Tokenization

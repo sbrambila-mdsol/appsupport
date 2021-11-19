@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>remainingimports</Token>
+  <Name>remaining imports</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement> SELECT REPLACE(ChildFileMask,'[FileDate]',[FileDate]) FROM IMMUNOMEDICS.AGD.tblMdDataFeed where TPSScenarioTypeID = 81000 and REPLACE(ChildFileMask,'[FileDate]',[FileDate]) not in 
+(
+ SELECT ImportedFileName
+ FROM [immunomedics].[AGD].[tblMdDatafeedImportlog]
+ where  cast(importeddate as date) in ('2019-01-16', '2019-01-15') and ImportedFileName not like 'File Not Found' and ImportSucceeded = 'y'
+ --order by importeddate desc, ImportedFileName desc
+ )
+--like cast(getdate() as date)</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

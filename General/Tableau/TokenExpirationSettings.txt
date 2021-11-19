@@ -1,0 +1,7 @@
+EXEC TPS_DBA.dbo.uspSetServerSetting
+          @SettingName = 'TableauUserAdminTokenName'
+		, @SettingValue = 'EUSADevQA'
+
+	EXEC TPS_DBA.dbo.uspSetServerSetting
+          @SettingName = 'TableauUserAdminToken'
+		, @SettingValue = 'SR2QUSi2QjCNCwEpzTUuKg==:bHYDIr9KfOjuF8Ytqalrm9GEi1NhLjQ3'

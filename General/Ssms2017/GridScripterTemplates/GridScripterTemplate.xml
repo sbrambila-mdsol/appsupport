@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridScripterTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>HTML &lt;table&gt;</Name>
+  <SaveGranularity>Entire</SaveGranularity>
+  <SavePath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\{Year}{Month}{Day}_{Hour}{Minute}{Second}.html</SavePath>
+  <OpenWithApplication />
+  <InvokeParametersReplacement>false</InvokeParametersReplacement>
+  <DefaultClipboardFormat>Html</DefaultClipboardFormat>
+  <Document>
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;/head&gt;
+{Selections}
+&lt;/html&gt;</Document>
+  <Selection>&lt;h1&gt;Selected Text Block #{SelectionN}&lt;/h1&gt;&lt;br /&gt;
+&lt;table border="1px"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;&lt;strong&gt;Row#&lt;/strong&gt;&lt;/th&gt;
+{HeadersRow}
+	&lt;/tr&gt;
+{Rows}
+&lt;/table&gt;</Selection>
+  <SelectionsSeparator>&lt;br /&gt;</SelectionsSeparator>
+  <Header>\t\t&lt;th&gt;&lt;strong&gt;{ColumnName}&lt;/strong&gt;&lt;/th&gt;</Header>
+  <HeadersSeparator>\r\n</HeadersSeparator>
+  <Row>	&lt;tr&gt;
+		&lt;td&gt;{RowN}&lt;/td&gt;
+{Values}
+	&lt;/tr&gt;</Row>
+  <RowsSeparator>\r\n</RowsSeparator>
+  <ColumnName />
+  <ColumnNamesSeparator />
+  <Value>\t\t&lt;td&gt;{Value}&lt;/td&gt;</Value>
+  <ValuesSeparator>\r\n</ValuesSeparator>
+  <StringFormatter>
+    <Pattern>{Value}</Pattern>
+  </StringFormatter>
+  <NStringFormatter>
+    <Pattern>{Value}</Pattern>
+  </NStringFormatter>
+  <IntegerFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>D</Format>
+  </IntegerFormatter>
+  <DoubleFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </DoubleFormatter>
+  <CurrencyFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </CurrencyFormatter>
+  <DateTimeFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>yyyy-MM-dd HH:mm:ss.fff</Format>
+  </DateTimeFormatter>
+  <DateFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>yyyy-MM-dd</Format>
+  </DateFormatter>
+  <TimeFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>HH:mm:ss.fff</Format>
+  </TimeFormatter>
+  <BooleanFormatter>
+    <Pattern>{Value}</Pattern>
+    <TrueString>1</TrueString>
+    <FalseString>0</FalseString>
+  </BooleanFormatter>
+  <GuidFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format />
+  </GuidFormatter>
+  <BinaryFormatter>
+    <Pattern>{Value}</Pattern>
+  </BinaryFormatter>
+  <XmlFormatter>
+    <Pattern>{Value}</Pattern>
+  </XmlFormatter>
+  <SpatialFormatter>
+    <Pattern>{Value}</Pattern>
+    <AsText>true</AsText>
+  </SpatialFormatter>
+  <NullString>NULL</NullString>
+  <UseInvariantCulture>true</UseInvariantCulture>
+  <MaxCharsPerValue>0</MaxCharsPerValue>
+  <ValuesEncodeMethod>HtmlEncode</ValuesEncodeMethod>
+</GridScripterTemplate>

@@ -1,0 +1,1 @@
+type = "Bug" AND created >= 2018-07-01 and created <= startOfDay()

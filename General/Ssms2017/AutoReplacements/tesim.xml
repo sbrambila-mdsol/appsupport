@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>tesim</Token>
+  <Name>tesaro import log</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>SELECT top 1000 *
+ FROM tesaro_controller.[AGD].[tblMdDatafeedImportlog]
+ --where importedfilename like 
+ --where tpsscenariotypeid in (40038)
+ --where importedfilename like '%medpro%'
+ --where filepath  like '%medpro%'
+ --where importedDate like '2019-02-22%'
+ order by importid desc</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

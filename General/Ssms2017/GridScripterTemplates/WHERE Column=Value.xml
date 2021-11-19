@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridScripterTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>WHERE Column=Value</Name>
+  <SaveGranularity>Entire</SaveGranularity>
+  <SavePath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\{Year}{Month}{Day}_{Hour}{Minute}{Second}.sql</SavePath>
+  <OpenWithApplication />
+  <InvokeParametersReplacement>false</InvokeParametersReplacement>
+  <DefaultClipboardFormat>Text</DefaultClipboardFormat>
+  <Document>WHERE {Selections}</Document>
+  <Selection>{Rows}</Selection>
+  <SelectionsSeparator> OR\r\n</SelectionsSeparator>
+  <Header />
+  <HeadersSeparator />
+  <Row>({Values})</Row>
+  <RowsSeparator> OR\r\n</RowsSeparator>
+  <ColumnName />
+  <ColumnNamesSeparator />
+  <Value>[{ColumnName}]{Value}</Value>
+  <ValuesSeparator> AND </ValuesSeparator>
+  <StringFormatter>
+    <Pattern>='{Value}'</Pattern>
+  </StringFormatter>
+  <NStringFormatter>
+    <Pattern>=N'{Value}'</Pattern>
+  </NStringFormatter>
+  <IntegerFormatter>
+    <Pattern>={Value}</Pattern>
+    <Format>D</Format>
+  </IntegerFormatter>
+  <DoubleFormatter>
+    <Pattern>={Value}</Pattern>
+    <Format>G</Format>
+  </DoubleFormatter>
+  <CurrencyFormatter>
+    <Pattern>={Value}</Pattern>
+    <Format>G</Format>
+  </CurrencyFormatter>
+  <DateTimeFormatter>
+    <Pattern>='{Value}'</Pattern>
+    <Format>yyyyMMdd HH:mm:ss.fff</Format>
+  </DateTimeFormatter>
+  <DateFormatter>
+    <Pattern>='{Value}'</Pattern>
+    <Format>yyyyMMdd</Format>
+  </DateFormatter>
+  <TimeFormatter>
+    <Pattern>='{Value}'</Pattern>
+    <Format>HH:mm:ss.fff</Format>
+  </TimeFormatter>
+  <BooleanFormatter>
+    <Pattern>={Value}</Pattern>
+    <TrueString>1</TrueString>
+    <FalseString>0</FalseString>
+  </BooleanFormatter>
+  <GuidFormatter>
+    <Pattern>='{Value}'</Pattern>
+    <Format />
+  </GuidFormatter>
+  <BinaryFormatter>
+    <Pattern>={Value}</Pattern>
+  </BinaryFormatter>
+  <XmlFormatter>
+    <Pattern>='{Value}'</Pattern>
+  </XmlFormatter>
+  <SpatialFormatter>
+    <Pattern>.STAsText()='{Value}'</Pattern>
+    <AsText>true</AsText>
+  </SpatialFormatter>
+  <NullString> is NULL</NullString>
+  <UseInvariantCulture>true</UseInvariantCulture>
+  <MaxCharsPerValue>0</MaxCharsPerValue>
+  <ValuesEncodeMethod>SqlEncode</ValuesEncodeMethod>
+</GridScripterTemplate>

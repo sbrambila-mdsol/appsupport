@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridScripterTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Excel (MS XML Spreadsheet)</Name>
+  <SaveGranularity>Entire</SaveGranularity>
+  <SavePath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\{Year}{Month}{Day}_{Hour}{Minute}{Second}.xml</SavePath>
+  <OpenWithApplication />
+  <InvokeParametersReplacement>false</InvokeParametersReplacement>
+  <DefaultClipboardFormat>XmlSpreadsheet</DefaultClipboardFormat>
+  <Document>&lt;?xml version="1.0"?&gt;
+&lt;?mso-application progid="Excel.Sheet"?&gt;
+&lt;Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40"&gt;
+	&lt;ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"&gt;
+	&lt;/ExcelWorkbook&gt;
+	&lt;Styles&gt;
+		&lt;Style ss:ID="sH1"&gt;&lt;Font ss:Bold="1"/&gt;&lt;/Style&gt;
+		&lt;Style ss:ID="sD1"&gt;&lt;NumberFormat ss:Format="General Date"/&gt;&lt;/Style&gt;
+		&lt;Style ss:ID="sD2"&gt;&lt;NumberFormat ss:Format="Short Date"/&gt;&lt;/Style&gt;
+		&lt;Style ss:ID="sD3"&gt;&lt;NumberFormat ss:Format="Short Time"/&gt;&lt;/Style&gt;
+	&lt;/Styles&gt;
+{Selections}
+&lt;/Workbook&gt;
+</Document>
+  <Selection>	&lt;Worksheet ss:Name="GridResults{SelectionN}"&gt;
+		&lt;Table&gt;
+			&lt;Row&gt;
+{HeadersRow}
+			&lt;/Row&gt;
+{Rows}
+		&lt;/Table&gt;
+	&lt;/Worksheet&gt;
+</Selection>
+  <SelectionsSeparator>\r\n</SelectionsSeparator>
+  <Header>				&lt;Cell ss:StyleID="sH1"&gt;&lt;Data ss:Type="String"&gt;{ColumnName}&lt;/Data&gt;&lt;/Cell&gt;</Header>
+  <HeadersSeparator>\r\n</HeadersSeparator>
+  <Row>			&lt;Row&gt;
+{Values}
+			&lt;/Row&gt;
+</Row>
+  <RowsSeparator>\r\n</RowsSeparator>
+  <ColumnName />
+  <ColumnNamesSeparator />
+  <Value>{Value}</Value>
+  <ValuesSeparator>\r\n</ValuesSeparator>
+  <StringFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+  </StringFormatter>
+  <NStringFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+  </NStringFormatter>
+  <IntegerFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="Number"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format>D</Format>
+  </IntegerFormatter>
+  <DoubleFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="Number"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format>G</Format>
+  </DoubleFormatter>
+  <CurrencyFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="Number"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format>G</Format>
+  </CurrencyFormatter>
+  <DateTimeFormatter>
+    <Pattern>				&lt;Cell ss:StyleID="sD1"&gt;&lt;Data ss:Type="DateTime"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format>yyyy-MM-ddTHH:mm:ss.fff</Format>
+  </DateTimeFormatter>
+  <DateFormatter>
+    <Pattern>				&lt;Cell ss:StyleID="sD2"&gt;&lt;Data ss:Type="DateTime"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format>yyyy-MM-ddT00:00:00.000</Format>
+  </DateFormatter>
+  <TimeFormatter>
+    <Pattern>				&lt;Cell ss:StyleID="sD3"&gt;&lt;Data ss:Type="DateTime"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format>1899-12-31THH:mm:ss.fff</Format>
+  </TimeFormatter>
+  <BooleanFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="Boolean"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <TrueString>1</TrueString>
+    <FalseString>0</FalseString>
+  </BooleanFormatter>
+  <GuidFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <Format />
+  </GuidFormatter>
+  <BinaryFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+  </BinaryFormatter>
+  <XmlFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+  </XmlFormatter>
+  <SpatialFormatter>
+    <Pattern>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;{Value}&lt;/Data&gt;&lt;/Cell&gt;</Pattern>
+    <AsText>true</AsText>
+  </SpatialFormatter>
+  <NullString>				&lt;Cell&gt;&lt;Data ss:Type="String"&gt;&lt;/Data&gt;&lt;/Cell&gt;</NullString>
+  <UseInvariantCulture>true</UseInvariantCulture>
+  <MaxCharsPerValue>1024</MaxCharsPerValue>
+  <ValuesEncodeMethod>XmlEncode</ValuesEncodeMethod>
+</GridScripterTemplate>

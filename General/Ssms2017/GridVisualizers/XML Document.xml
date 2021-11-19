@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridVisualizer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>XML Document</Name>
+  <FileExtension>xml</FileExtension>
+  <OpenInSsms>true</OpenInSsms>
+  <RunFileName>{file}</RunFileName>
+  <RunArguments />
+  <CellTextEncodeMethod>None</CellTextEncodeMethod>
+</GridVisualizer>

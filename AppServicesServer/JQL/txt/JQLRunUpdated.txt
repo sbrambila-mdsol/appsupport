@@ -1,0 +1,1 @@
+type = "Production Run" AND (created < 2019-02-25 and created >= '2018-07-01' OR created > 2019-06-01 and created <=startOfDay()) ORDER BY created DESC, project

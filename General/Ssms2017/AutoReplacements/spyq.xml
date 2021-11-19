@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>spyq</Token>
+  <Name>Spy Query</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>true</SelectReplacement>
+  <Replacement>#SELECT s.session_id as [Session ID], s.host_name as [Host], s.login_name as [User], s.status as [Status], r.start_time as [Start Time], 
+CASE when r.total_elapsed_time &gt; 1000 THEN 
+   convert(varchar,(r.total_elapsed_time/(1000))/(60*60)) + ' h ' + 
+   convert(varchar,(convert(varchar,(r.total_elapsed_time/1000)-(convert(varchar,(r.total_elapsed_time/1000%60)))))/60%60) + ' m ' + 
+   convert(varchar,(r.total_elapsed_time/(1000))%60) + ' s ' 
+ ELSE   convert(varchar,(r.total_elapsed_time*1)) + ' ms ' 
+	end	  as [Run Time],
+r.command, r.reads, r.writes, r.logical_reads,
+(select text from sys.dm_exec_sql_text(r.sql_handle)) as sql_text
+FROM sys.dm_exec_sessions s
+join sys.dm_exec_requests r on s.session_id = r.session_id
+where host_name is not null
+
+
+
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

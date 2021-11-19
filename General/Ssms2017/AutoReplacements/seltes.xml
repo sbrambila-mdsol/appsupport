@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>seltes</Token>
+  <Name>select tesaro</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>DECLARE @Scenario VARCHAR(10) = '#'
+SELECT * FROM  TESARO_CONTROLLER.AGD.tblMdDataRun where TPSScenarioTypeID = @Scenario ORDER BY ExecOrder ASC
+SELECT * FROM  TESARO_CONTROLLER.AGD.tblMdDataFeed where TPSScenarioTypeID = @Scenario ORDER BY LoadOrder ASC
+SELECT * FROM  TESARO_CONTROLLER.AGD.tblMdDataFeedDownload where TPSDataFeedID in ( 
+SELECT TPSDataFeedID FROM  TESARO_CONTROLLER.AGD.tblMdDataFeed where TPSScenarioTypeID = @Scenario ) ORDER BY TPSDataFeedID ASC</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

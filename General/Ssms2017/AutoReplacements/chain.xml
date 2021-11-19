@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>chain</Token>
+  <Name>chain scenario relationship</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>select * from TPS_DBA.dbo.vwJobChainScenarioRelationship where L1JobName like '%#%' order by L1JobID, L2ExecOrder, L3ExecOrder, L4ExecOrder
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

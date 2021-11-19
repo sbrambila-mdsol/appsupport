@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>spyuj</Token>
+  <Name>upcoming scheduled jobs</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>true</SelectReplacement>
+  <Replacement>use msdb
+go
+select a.name as [Job Name], CASE a.enabled
+			WHEN 0 THEN 'No'
+			WHEN 1 THEN 'Yes'
+			ELSE 'Unknown' 
+			END AS [Enabled],
+	CASE 
+		 WHEN b.next_run_time &gt; 219999 THEN 
+		SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4) - 1200), 1, 2) + ':' + SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4) - 1200), 3, 2) + ' PM'
+		 WHEN b.next_run_time &gt; 129999 THEN 
+		SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4) - 1200), 1, 1) + ':' + SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4) - 1200), 2, 2) + ' PM'
+		 WHEN b.next_run_time &gt; 119999 THEN 
+		SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4)), 1, 2) + ':' + SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4)), 3, 2) + ' PM' 
+		 WHEN b.next_run_time &gt; 99999 THEN 
+		SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4)), 1, 2) + ':' + SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4)), 3, 2) + ' AM' 
+		 ELSE	
+		SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4)), 1, 1) + ':' + SUBSTRING(convert(varchar, LEFT(b.next_run_time, 4)), 3, 2) + ' AM' 
+	END as [Scheduled time to execute]
+from sysjobs a, sysjobschedules b
+where a.job_id= b.job_id 
+AND next_run_date = CONVERT(varchar(8), GETDATE(), 112) --comment out if you'd like to see future dates
+order by b.next_run_time;
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GridScripterTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>SELECT</Name>
+  <SaveGranularity>Entire</SaveGranularity>
+  <SavePath>C:\Users\afennessy\AppData\Roaming\SSMSBoost\{Year}{Month}{Day}_{Hour}{Minute}{Second}.sql</SavePath>
+  <OpenWithApplication />
+  <InvokeParametersReplacement>false</InvokeParametersReplacement>
+  <DefaultClipboardFormat>Text</DefaultClipboardFormat>
+  <Document>{Selections}</Document>
+  <Selection>--ATTENTION. Works starting from SQL Server 2008 (10.xxx)
+--Check your server version in status bar if you get syntax error
+SELECT * 
+FROM (
+VALUES 
+{Rows}) AS vtable 
+({HeadersRow})</Selection>
+  <SelectionsSeparator>\r\n-------------------\r\n</SelectionsSeparator>
+  <Header>[{ColumnName}]</Header>
+  <HeadersSeparator>,</HeadersSeparator>
+  <Row>({Values})</Row>
+  <RowsSeparator>,\r\n</RowsSeparator>
+  <ColumnName />
+  <ColumnNamesSeparator />
+  <Value>{Value}</Value>
+  <ValuesSeparator>,</ValuesSeparator>
+  <StringFormatter>
+    <Pattern>'{Value}'</Pattern>
+  </StringFormatter>
+  <NStringFormatter>
+    <Pattern>N'{Value}'</Pattern>
+  </NStringFormatter>
+  <IntegerFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>D</Format>
+  </IntegerFormatter>
+  <DoubleFormatter>
+    <Pattern>{Value}</Pattern>
+    <Format>G</Format>
+  </DoubleFormatter>
+  <CurrencyFormatter>
+    <Pattern>CAST({Value} as MONEY)</Pattern>
+    <Format>G</Format>
+  </CurrencyFormatter>
+  <DateTimeFormatter>
+    <Pattern>CAST('{Value}' as DATETIME)</Pattern>
+    <Format>yyyyMMdd HH:mm:ss.fff</Format>
+  </DateTimeFormatter>
+  <DateFormatter>
+    <Pattern>CAST('{Value}' as DATE)</Pattern>
+    <Format>yyyyMMdd</Format>
+  </DateFormatter>
+  <TimeFormatter>
+    <Pattern>CAST('{Value}' as TIME)</Pattern>
+    <Format>HH:mm:ss.fff</Format>
+  </TimeFormatter>
+  <BooleanFormatter>
+    <Pattern>{Value}</Pattern>
+    <TrueString>1</TrueString>
+    <FalseString>0</FalseString>
+  </BooleanFormatter>
+  <GuidFormatter>
+    <Pattern>CAST ('{Value}' as uniqueidentifier)</Pattern>
+    <Format />
+  </GuidFormatter>
+  <BinaryFormatter>
+    <Pattern>{Value}</Pattern>
+  </BinaryFormatter>
+  <XmlFormatter>
+    <Pattern>cast('{Value}' as XML)</Pattern>
+  </XmlFormatter>
+  <SpatialFormatter>
+    <Pattern>'{Value}'</Pattern>
+    <AsText>true</AsText>
+  </SpatialFormatter>
+  <NullString>NULL</NullString>
+  <UseInvariantCulture>true</UseInvariantCulture>
+  <MaxCharsPerValue>0</MaxCharsPerValue>
+  <ValuesEncodeMethod>SqlEncode</ValuesEncodeMethod>
+</GridScripterTemplate>

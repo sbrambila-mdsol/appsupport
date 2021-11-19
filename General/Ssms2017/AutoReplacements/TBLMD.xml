@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>TBLMD</Token>
+  <Name>metadata tables</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>DECLARE @Scenario VARCHAR(10) = '#'
+DECLARE @ProcessingDb VARCHAR(MAX) = (SELECT TOP 1 TPS_DBA.dbo.udfGetArgument(Arguments, 'PROCESSINGDB') FROM [TPS_DBA].[dbo].[vwTaskQueue])
+DECLARE @SQL VARCHAR(MAX) = 
+'
+SELECT * FROM  ' + @ProcessingDb + '.AGD.tblMdDataRun where TPSScenarioTypeID = ' + @Scenario + ' ORDER BY ExecOrder ASC
+SELECT * FROM  ' + @ProcessingDb + '.AGD.tblMdDataFeed where TPSScenarioTypeID = ' + @Scenario + ' ORDER BY LoadOrder ASC
+SELECT * FROM  ' + @ProcessingDb + '.AGD.tblMdDataFeedDownload where TPSDataFeedID in ( SELECT TPSDataFeedID FROM  ' + @ProcessingDb + '.AGD.tblMdDataFeed where TPSScenarioTypeID = ' + @Scenario + ' ) ORDER BY TPSDataFeedID ASC
+'
+PRINT @SQL
+EXEC (@SQL)</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

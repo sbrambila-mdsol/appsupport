@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>dbbackup</Token>
+  <Name>DB backup</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>--on the source database (usually processing)
+EXEC TPS_DBA.dbo.uspTPS_CreateDBBackup
+    @DBName     = 'DATABASENAME',
+        --this is the name of the database on the source server to be backed up
+    @BackupName = '\\FILESERVER\g$\MSSQL\Backup\DATABASENAME\DATABASEFILEPATH.bak'
+        --location on the file server you wish to save your backup to</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

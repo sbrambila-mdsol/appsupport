@@ -1,0 +1,1 @@
+type = "Production Issue" AND project not in ("Customer Success Production Archive","Customer Success Production", "Astellas - ARCHIVED", "NPS - ARCHIVED", "AgileDWorkbench - INACTIVE",  "AZO PROD - ARCHIVED", "Purdue - ARCHIVED ", "Analytics Platform","Quantum") AND updated >= startOfDay() ORDER BY rank ASC, key ASC, updated ASC, project ASC

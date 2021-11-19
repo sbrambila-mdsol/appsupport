@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>seltblcatalog</Token>
+  <Name>tbl catalog</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>SELECT * FROM agilem_app.dbo.tblcatalog where active = 1
+update agilem_app.dbo.tblcatalog set active = 1 where CatalogKey in ('#', '')</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

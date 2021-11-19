@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>insertinto</Token>
+  <Name>insertinto</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>/*Insert data FROM one table into another table with where clause*/
+--
+DECLARE @ExecStr nvarchar(max)
+set @ExecStr = 'truncate table ' + @IMDBName + '.dbo.[' + @LandingTableName + ']'
+exec (@ExecStr)
+
+--DECLARE @ExecStr nvarchar(max)
+DECLARE	@IMDBName sysname = agd.udfGetSetting ('IMDBName')
+DECLARE @ColumnList nvarchar(max) --Column list for import landing table
+DECLARE @InsertInto NVARCHAR(MAX) = ''
+DECLARE @InsertFrom NVARCHAR(MAX) = ''
+
+select @ExecStr = N'select @ColumnListOUT = isnull(@ColumnListOUT, '''') + '',['' + COLUMN_NAME + '']'' from ' + @IMDBName + '.INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = ''' + @LandingTableName + ''''
+exec sp_executesql @ExecStr, N'@ColumnListOUT nvarchar(max) output', @ColumnListOUT = @ColumnList output;
+set @ColumnList = substring(@ColumnList, 2, 10000)
+
+
+set @ExecStr = 'insert into ' + @IMDBName + '.dbo.[' + @InsertInto + '] (' + @ColumnList + ')'
+				+ ' select ' + @ColumnList + ' from ' + @IMDBName + '.dbo.[' + @InsertFrom + ']'
+				+ ' where HistoryDataDate = (select max(HistoryDataDate) from ' + @IMDBName + '.dbo.[' + @InsertFrom + '])'
+print @execStr
+exec (@ExecStr)
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

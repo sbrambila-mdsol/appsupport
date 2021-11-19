@@ -1,0 +1,1 @@
+type = "Story - BI Visualization" AND project not in ("Strata v3","TEST PROJECT JC","Analytics Platform","Andy's Play Pen","ASCO OMOP","AZO-Ongoing","Center of Excellence") AND updated >= startOfDay()

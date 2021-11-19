@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>DBrestore</Token>
+  <Name>DB restore</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>--on the destination database (usually production)
+EXEC TPS_DBA.dbo.uspTPS_CreateDBRestore
+                    @DBName         = 'DATABASENAME(_Datadate)',
+                        --this is the name of the database to be restored on the destination server. WILL OVERWRITE IF SAME NAME
+                    @BackupName     = '\\FILESERVER\g$\MSSQL\Backup\DATABASENAME\DATABASEFILEPATH.bak',
+                        --location on the file server you wish to retrieve your backup from
+                    @PermissionXML  = ''
+                        -- or! something like:
+                        --              '&lt;root&gt;
+                        --                  &lt;UserPermissions&gt;&lt;UserName&gt;BAUser&lt;/UserName&gt;&lt;UserRole&gt;db_datareader&lt;/UserRole&gt;&lt;/UserPermissions&gt;
+                        --              &lt;/root&gt;'
+
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

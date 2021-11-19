@@ -1,0 +1,5 @@
+--reset admin password
+tsm reset
+
+--reset user and password
+tabcmd initialuser -s prdgwpeu10tab1 -u shyftadmin -p A1CORN$!GWPEU

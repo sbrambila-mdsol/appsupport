@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>selimm</Token>
+  <Name>selimm</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>Declare @Scenario varchar(50) = #
+select * from  IMMUNOMEDICS.AGD.tblMdDataRun where TPSScenarioTypeID = @Scenario
+select * from  IMMUNOMEDICS.AGD.tblMdDataFeed where TPSScenarioTypeID = @Scenario
+select * from  IMMUNOMEDICS.AGD.tblMdDataFeedDownload where TPSDataFeedID in ( 
+select TPSDataFeedID from  IMMUNOMEDICS.AGD.tblMdDataFeed where TPSScenarioTypeID = @Scenario)</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

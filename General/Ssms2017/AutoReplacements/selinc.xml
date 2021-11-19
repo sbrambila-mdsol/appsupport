@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>selinc</Token>
+  <Name>select incyte</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>select * from  Ariad_Processing_EU_Daily.AGD.tblMdDataRun where TPSScenarioTypeID = 
+select * from  Ariad_Processing_EU_Daily.AGD.tblMdDataFeed where TPSScenarioTypeID = 
+select * from  Ariad_Processing_EU_Daily.AGD.tblMdDataFeedDownload where TPSDataFeedID in ( 
+select TPSDataFeedID from  Ariad_Processing_EU_Daily.AGD.tblMdDataFeed where TPSScenarioTypeID = #)
+</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>

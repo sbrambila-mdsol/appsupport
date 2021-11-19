@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AutoReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Token>sth</Token>
+  <Name>Select Top 100</Name>
+  <CaseSensitive>false</CaseSensitive>
+  <SelectReplacement>false</SelectReplacement>
+  <Replacement>SELECT 	TOP 100 * 
+FROM 	#</Replacement>
+  <CursorPositionMarker>#</CursorPositionMarker>
+</AutoReplacement>
